@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <!-- Dashboard Admin -->
+        <item
+            android:id="@+id/nav_admin_home"
+            android:title="Dashboard Thống kê" />
+        <!-- Quản lý mặt hàng -->
+        <item
+            android:id="@+id/nav_admin_add_product"
+            android:title="Thêm sản phẩm mới" />
+        <!-- Quản lý giao hàng -->
+        <item
+            android:id="@+id/nav_admin_orders"
+            android:title="Quản lý Đơn hàng" />
+        <!-- Chuyển về màn Client -->
+        <item
+            android:id="@+id/nav_admin_to_user"
+            android:title="Xem giao diện Khách hàng" />
+    </group>
+
+    <item android:title="Hệ thống">
+        <menu>
+            <item
+                android:id="@+id/nav_admin_logout"
+                android:title="Đăng xuất" />
+        </menu>
+    </item>
+</menu>

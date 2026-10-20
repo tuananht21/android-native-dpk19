@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="XÁC NHẬN ĐẶT HÀNG"
+        android:textColor="#D01012"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/edtDiaChiGiao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:hint="Địa chỉ nhận hàng" />
+
+    <EditText
+        android:id="@+id/edtSdtNhan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Số điện thoại nhận hàng"
+        android:inputType="phone" />
+
+    <EditText
+        android:id="@+id/edtGhiChu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Ghi chú (Ví dụ: Giao giờ hành chính)" />
+
+    <Button
+        android:id="@+id/btnXacNhanDatHang"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#D01012"
+        android:text="Xác nhận tạo đơn hàng"
+        android:textColor="#FFFFFF" />
+</LinearLayout>

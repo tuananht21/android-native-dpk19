@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+
+    <!-- 1. Toolbar trên cùng (Nút Quay lại + Tiêu đề + Icon Giỏ hàng) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#D01012"
+        android:elevation="2dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp">
+
+        <ImageView
+            android:id="@+id/btnDetailQuayLai"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:padding="2dp"
+            android:rotation="180"
+            android:src="@drawable/ic_logout"
+            app:tint="#FFFFFF" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_weight="1"
+            android:text="CHI TIẾT SẢN PHẨM"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/btnDetailGioHang"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:padding="2dp"
+            android:src="@drawable/ic_shopping_cart"
+            app:tint="#FFFFFF" />
+    </LinearLayout>
+
+    <!-- 2. Nội dung cuộn thông tin LEGO -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Ảnh sản phẩm chính -->
+            <ImageView
+                android:id="@+id/imgChiTietSanPham"
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:background="#F8F9FA"
+                android:padding="16dp"
+                android:scaleType="fitCenter" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Tên sản phẩm -->
+                <TextView
+                    android:id="@+id/tvTenChiTiet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Bộ lắp ráp LEGO City Stunt Bike"
+                    android:textColor="#222222"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <!-- Giá tiền -->
+                <TextView
+                    android:id="@+id/tvGiaChiTiet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="1.250.000 đ"
+                    android:textColor="#D01012"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginVertical="16dp"
+                    android:background="#E0E0E0" />
+
+                <!-- Bộ chọn số lượng mua -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Số lượng:"
+                        android:textColor="#333333"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <!-- Nút Giảm (-) -->
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnGiamSoLuong"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:background="#EEEEEE"
+                        android:text="-"
+                        android:textColor="#222222"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <!-- Hiển thị số lượng -->
+                    <TextView
+                        android:id="@+id/tvSoLuongMua"
+                        android:layout_width="48dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="1"
+                        android:textColor="#222222"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <!-- Nút Tăng (+) -->
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnTangSoLuong"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:background="#EEEEEE"
+                        android:text="+"
+                        android:textColor="#222222"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginVertical="16dp"
+                    android:background="#E0E0E0" />
+
+                <!-- Mô tả sản phẩm -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mô tả sản phẩm"
+                    android:textColor="#333333"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvMoTaChiTiet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:lineSpacingExtra="4dp"
+                    android:text="Thông tin chi tiết bộ gạch lắp ráp..."
+                    android:textColor="#666666"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- 3. Thanh nút Thêm vào giỏ hàng cố định chân trang -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:elevation="6dp"
+        android:padding="12dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnThemVaoGioHang"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="#D01012"
+            android:text="Thêm vào giỏ hàng"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>

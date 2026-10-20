@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+
+    <!-- 1. Toolbar phẳng có nút Quay lại -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#D01012"
+        android:elevation="2dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp">
+
+        <ImageView
+            android:id="@+id/btnAdminAddQuayLai"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:padding="2dp"
+            android:rotation="180"
+            android:src="@drawable/ic_logout"
+            app:tint="#FFFFFF" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_weight="1"
+            android:text="THÊM SẢN PHẨM MỚI"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- 2. Khu vực chọn ảnh sản phẩm -->
+            <LinearLayout
+                android:id="@+id/layoutChonAnh"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:background="@android:drawable/editbox_background"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/imgAdminAnhSP"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_shopping_cart"
+                    app:tint="#888888" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="Bấm để chọn ảnh sản phẩm"
+                    android:textColor="#666666"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <!-- 3. Danh mục sản phẩm (Dạng Spinner dropdown) -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Danh mục LEGO"
+                android:textColor="#333333"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spnAdminDanhMuc"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="6dp"
+                android:background="@android:drawable/editbox_background"
+                android:hint="Nhập mã danh mục (VD: 1, 2...)"
+                android:inputType="number"
+                android:paddingHorizontal="12dp"
+                android:textSize="14sp" />
+
+            <!-- 4. Tên sản phẩm -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Tên sản phẩm"
+                android:textColor="#333333"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edtAdminTenSP"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="6dp"
+                android:background="@android:drawable/editbox_background"
+                android:hint="Nhập tên bộ LEGO"
+                android:inputType="textCapWords"
+                android:paddingHorizontal="12dp"
+                android:textSize="14sp" />
+
+            <!-- 5. Giá bán & Số lượng tồn (Xếp hàng ngang gọn gàng) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Giá bán (VNĐ)"
+                        android:textColor="#333333"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/edtAdminGiaBan"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="6dp"
+                        android:background="@android:drawable/editbox_background"
+                        android:hint="0 đ"
+                        android:inputType="number"
+                        android:paddingHorizontal="12dp"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="12dp"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Số lượng tồn"
+                        android:textColor="#333333"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/edtAdminSoLuongTon"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="6dp"
+                        android:background="@android:drawable/editbox_background"
+                        android:hint="0"
+                        android:inputType="number"
+                        android:paddingHorizontal="12dp"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 6. Mô tả chi tiết -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Mô tả chi tiết"
+                android:textColor="#333333"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edtAdminMoTa"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="6dp"
+                android:background="@android:drawable/editbox_background"
+                android:gravity="top|start"
+                android:hint="Nhập mô tả chi tiết bộ LEGO..."
+                android:inputType="textMultiLine"
+                android:padding="12dp"
+                android:textSize="14sp" />
+
+            <!-- 7. Nút Lưu sản phẩm -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnAdminLuuSanPham"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="24dp"
+                android:background="#D01012"
+                android:text="Lưu sản phẩm"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

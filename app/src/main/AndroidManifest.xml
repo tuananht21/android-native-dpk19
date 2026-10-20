@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.legostore">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="LEGO Store"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"
+        android:usesCleartextTraffic="true">
+
+        <!-- 1. Màn hình Chờ (Splash) chạy ĐẦU TIÊN khi mở App -->
+        <activity
+            android:name=".activities.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 2. Các màn hình khác -->
+        <activity android:name=".MainActivity" />
+        <activity android:name=".activities.LoginActivity" />
+        <activity android:name=".activities.RegisterActivity" />
+        <activity android:name=".activities.ProductDetailActivity" />
+        <activity android:name=".activities.CartActivity" />
+        <activity android:name=".activities.CheckoutActivity" />
+        <activity android:name=".activities.OrderListActivity" />
+        <activity android:name=".activities.ProfileActivity" />
+        <activity android:name=".activities.AdminDashboardActivity" />
+        <activity android:name=".activities.AdminAddProductActivity" />
+        <activity android:name=".activities.AdminOrderManageActivity" />
+
+    </application>
+
+</manifest>
